@@ -4,6 +4,7 @@ set -euo pipefail
 REPO_DIR="$(cd "$(dirname "$0")/.." && pwd)"
 SRC="$REPO_DIR/skills"
 DST="$HOME/.codex/skills"
+BACKUP_ROOT="$HOME/.codex/skills_backup/$(date +%Y%m%d%H%M%S)"
 mkdir -p "$DST"
 
 for skill_dir in "$SRC"/*; do
@@ -14,7 +15,8 @@ for skill_dir in "$SRC"/*; do
   if [ -L "$target" ]; then
     rm "$target"
   elif [ -e "$target" ]; then
-    mv "$target" "$target.local.bak.$(date +%Y%m%d%H%M%S)"
+    mkdir -p "$BACKUP_ROOT"
+    mv "$target" "$BACKUP_ROOT/$name"
   fi
 
   ln -s "$skill_dir" "$target"
