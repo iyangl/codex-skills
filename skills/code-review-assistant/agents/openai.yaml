@@ -1,0 +1,4 @@
+interface:
+  display_name: "Code Review Assistant"
+  short_description: "Run bug-first code review"
+  default_prompt: "Use $code-review-assistant to review my latest code changes and return prioritized findings."

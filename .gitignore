@@ -1,0 +1,6 @@
+# Track skills even if globally ignored
+!skills/
+!skills/**
+
+# macOS
+.DS_Store

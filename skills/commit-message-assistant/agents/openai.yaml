@@ -1,0 +1,4 @@
+interface:
+  display_name: "Commit Message Assistant"
+  short_description: "Generate commit message candidates"
+  default_prompt: "Use $commit-message-assistant to generate 3 commit message candidates from current git changes and recommend one."

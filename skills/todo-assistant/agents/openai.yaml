@@ -1,0 +1,4 @@
+interface:
+  display_name: "Todo Assistant"
+  short_description: "Project-scoped todo manager"
+  default_prompt: "Use $todo-assistant to list current project todos by default, add/update/delete items, and show all projects only when requested."
