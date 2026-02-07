@@ -37,6 +37,20 @@ codex-skills/
 
 3. 检查 `~/.codex/skills` 下是否已生成对应软链接。
 
+## Windows 接入（Git Bash）
+
+在 Windows 上推荐使用 Git Bash 运行脚本。
+
+1. 打开 Git Bash，进入仓库目录（例如 `E:/Development/Codes/codex-skills`）。
+2. 运行脚本（避免因可执行位或隐藏字符导致失败，建议用 bash 直接执行）：
+
+```bash
+bash scripts/link-skills.sh
+```
+
+3. 如果脚本需要创建符号链接失败，开启 Windows Developer Mode，或以管理员权限运行 Git Bash。
+4. 检查 `C:\Users\<你>\.codex\skills` 下是否已生成对应软链接。
+
 ## 多机同步流程
 
 1. 在任一机器修改 `skills/*`。
